@@ -1,0 +1,35 @@
+﻿<Window x:Class="Voice_Recognition.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Voice_Recognition"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="BtnVoiceEnable" Content="VoiceEnable" HorizontalAlignment="Left" Margin="117,303,0,0" VerticalAlignment="Top" Width="75" Click="BtnVoiceEnable_Click"/>
+        <Button x:Name="BtnVoiceDisable" Content="VoiceDisable" IsEnabled="False" HorizontalAlignment="Left" Margin="421,303,0,0" VerticalAlignment="Top" Width="75" Click="BtnVoiceDisable_Click"/>
+        <ListView Name="lstWords" HorizontalAlignment="Left" Height="158" Margin="596,75,0,0" VerticalAlignment="Top" Width="171">
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridView.Columns>
+                        <GridViewColumn Header="Id"
+                            DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Name"
+                            DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Counter"
+                            DisplayMemberBinding="{Binding Counter}" />
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox Name="txtNewWord" HorizontalAlignment="Left" Height="23" Margin="24,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.522,0.551"/>
+        <Menu HorizontalAlignment="Stretch" Height="19" Margin="0,0,0,0" VerticalAlignment="Top" Width="Auto">
+            <MenuItem Header="File">
+                <MenuItem Header="test"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Button Name="btnAddWordToDb" Content="Dodaj" HorizontalAlignment="Left" Margin="24,109,0,0" VerticalAlignment="Top" Width="75" Click="BtnAddWordToDb_Click"/>
+
+    </Grid>
+</Window>
